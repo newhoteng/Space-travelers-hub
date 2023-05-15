@@ -7,8 +7,8 @@ function MissionItem({ itemProps }) {
     <tr className={styles.tablerow}>
       <td>{itemProps.name}</td>
       <td>{itemProps.description}</td>
-      <td><button type="button">NOT A MEMBER</button></td>
-      <td><button type="button">Join Mission</button></td>
+      <td><button className={styles.member} type="button">NOT A MEMBER</button></td>
+      <td><button className={styles.join} type="button">Join Mission</button></td>
     </tr>
   );
 }

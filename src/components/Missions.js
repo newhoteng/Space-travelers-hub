@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getMissions } from '../redux/missions/missionsSlice';
 import MissionItem from './MissionItem';
+import styles from '../styles/Missions.module.css';
 
 function Missions() {
   const { missions, isLoading, error } = useSelector((store) => store.missions);
@@ -33,7 +34,7 @@ function Missions() {
           <th>Mission</th>
           <th>Description</th>
           <th>Status</th>
-          <th>Blank</th>
+          <th className={styles.invisible}>Blank</th>
         </tr>
       </thead>
       <tbody>
