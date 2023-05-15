@@ -1,0 +1,59 @@
+table {
+  border-collapse: collapse;
+  margin: 2rem;
+}
+
+td,
+th {
+  border: 1px solid #dee2e6;
+  text-align: left;
+  padding: 8px;
+}
+
+td:first-child {
+  font-weight: bold;
+}
+
+td:nth-child(3) {
+  width: 120px;
+}
+
+td:nth-child(4) {
+  width: 150px;
+  text-align: center;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.invisible {
+  color: #fff;
+}
+
+tbody > tr > :nth-child(2) {
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+button.member {
+  background-color: #6c757e;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+
+  /* #1aa1b9 active */
+}
+
+button.join {
+  color: #6c757e;
+
+  /* #df4553 leave */
+  border: 1px solid #6c757e;
+  border-radius: 5px;
+  font-size: 1rem;
+  padding: 0.5rem;
+  background: transparent;
+}

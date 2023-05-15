@@ -1,0 +1,38 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1.5px solid #e8e8e8;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.header img {
+  width: 4rem;
+  height: 4rem;
+  margin-top: 13px;
+}
+
+.header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 23px;
+}
+
+.header li {
+  list-style: none;
+  color: rgb(34, 124, 233);
+}
+
+.item {
+  border-left: 2px solid rgb(173, 173, 176);
+}
