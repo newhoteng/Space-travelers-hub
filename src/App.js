@@ -1,9 +1,13 @@
+import Header from './components/Header';
 import Missions from './components/Missions';
 import './App.css';
 
 function App() {
   return (
-    <Missions />
+    <div className="App">
+      <Header />
+      <Missions />
+    </div>
   );
 }
 
