@@ -5,12 +5,11 @@ import MissionItem from './MissionItem';
 
 function Missions() {
   const { missions, isLoading, error } = useSelector((store) => store.missions);
-  // console.log(missions);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getMissions());
-  }, []);
+  }, [dispatch]);
 
   if (isLoading) {
     return (
