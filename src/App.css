@@ -4,3 +4,36 @@
   border-radius: 4px;
   box-shadow: 0 0 60px 0 rgba(0, 0, 0, 0.05);
 }
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.article img {
+  width: 225px;
+  margin-left: 43px;
+  margin-top: 17px;
+}
+
+.desc {
+  margin-left: 17px;
+}
+
+.reserve {
+  color: rgb(255, 255, 255);
+  height: 30px;
+  width: 117px;
+  background-color: rgb(47, 103, 245);
+  border-radius: 4px;
+  border: 1px solid rgb(47, 103, 245);
+}
+
+.cancel {
+  color: rgb(161, 155, 155);
+  height: 30px;
+  width: 140px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(92, 93, 94);
+}
