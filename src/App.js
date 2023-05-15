@@ -16,10 +16,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    // <div className="App">
-    //   <Header />
-    //   <Missions />
-    // </div>
   );
 }
 
