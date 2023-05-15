@@ -1,10 +1,10 @@
 table {
   border-collapse: collapse;
-  /* width: 100%; */
   margin: 2rem;
 }
 
-td, th {
+td,
+th {
   border: 1px solid #dee2e6;
   text-align: left;
   padding: 8px;
@@ -31,7 +31,7 @@ tr:nth-child(even) {
   color: #fff;
 }
 
-tbody>tr>:nth-child(2){ 
+tbody > tr > :nth-child(2) {
   font-size: 0.9rem;
   line-height: 1.5;
 }
@@ -43,11 +43,13 @@ button.member {
   border: none;
   border-radius: 5px;
   text-align: center;
+
   /* #1aa1b9 active */
 }
 
 button.join {
   color: #6c757e;
+
   /* #df4553 leave */
   border: 1px solid #6c757e;
   border-radius: 5px;
