@@ -20,7 +20,7 @@ function Header() {
             <li><NavLink style={navLinkStyles} to="/dragons">Dragons</NavLink></li>
             <li><NavLink style={navLinkStyles} to="/missions">Missions</NavLink></li>
             <li className={styles.item} />
-            <li><NavLink style={navLinkStyles} to="/dragons">My Profile</NavLink></li>
+            <li><NavLink style={navLinkStyles} to="/profile">My Profile</NavLink></li>
           </ul>
         </nav>
       </header>
