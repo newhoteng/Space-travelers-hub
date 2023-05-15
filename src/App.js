@@ -1,21 +1,22 @@
-import { Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Missions from './pages/MissionsPage';
-import MyProfile from './pages/MyProfilePage';
-import Rockets from './pages/RocketsPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './components/Header';
+import Missions from './components/Missions';
+import './App.css';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <div className="container">
-        <Routes>
-          <Route path="/rockets" element={<Rockets />} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          {/* <Route index element={<Rockets />} /> */}
+          {/* <Route path="/dragons" element={<Dragons />} /> */}
           <Route path="/missions" element={<Missions />} />
-          <Route path="/my-profile" element={<MyProfile />} />
-        </Routes>
-      </div>
-    </>
+          {/* <Route path="/profile" element={<Profile />} /> */}
+          <Route path="/*" element={<div>Page not found</div>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
