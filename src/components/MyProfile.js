@@ -9,7 +9,7 @@ function MyProfile() {
   return (
     <div className={styles.tablesContainer}>
       <div className={styles.eachTable}>
-        <p>My Mission</p>
+        <p>My Missions</p>
         <table className={styles.profilePage}>
           {reservedMissions.map((mission) => (
             <tr key={mission.id}>
