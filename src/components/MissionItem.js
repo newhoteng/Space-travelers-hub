@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
-import { joinMission } from '../redux/missions/missionsSlice';
+import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
 import styles from '../styles/Missions.module.css';
 
 function MissionItem({ itemProps }) {
@@ -29,7 +29,13 @@ function MissionItem({ itemProps }) {
           </button>
         )}
         {itemProps.reserved && (
-          <button className={`${styles.leave} ${styles.joinLeave}`} type="button">Leave Mission</button>
+          <button
+            className={`${styles.leave} ${styles.joinLeave}`}
+            type="button"
+            onClick={() => { dispatch(leaveMission(itemProps.id)); }}
+          >
+            Leave Mission
+          </button>
         )}
       </td>
     </tr>

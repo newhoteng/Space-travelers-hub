@@ -41,9 +41,13 @@ const missionsSlice = createSlice({
         return { ...mission, reserved: true };
       });
     },
-    // leaveMission: (state, action) => {
-
-    // }
+    leaveMission: (state, action) => {
+      const itemId = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.id !== itemId) return mission;
+        return { ...mission, reserved: false };
+      });
+    },
   },
   extraReducers: (builder) => {
     // getDragons
@@ -61,5 +65,5 @@ const missionsSlice = createSlice({
   },
 });
 
-export const { joinMission } = missionsSlice.actions;
+export const { joinMission, leaveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
