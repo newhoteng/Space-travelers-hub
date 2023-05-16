@@ -28,7 +28,7 @@ function Missions() {
   }
 
   return (
-    <table>
+    <table className={styles.missionPage}>
       <thead>
         <tr>
           <th>Mission</th>
