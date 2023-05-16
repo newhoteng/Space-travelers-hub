@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<Rockets />} />
         <Route path="/missions" element={<Missions />} />
         <Route path="/dragons" element={<Dragons />} />
-        <Route path="/my-profile" element={<MyProfile />} />
+        <Route path="/profile" element={<MyProfile />} />
       </Routes>
     </BrowserRouter>
   );

@@ -10,20 +10,21 @@ th {
   padding: 8px;
 }
 
-td:first-child {
+.missionPage td:first-child {
   font-weight: bold;
 }
 
-td:nth-child(3) {
+.missionPage td:nth-child(3) {
   width: 120px;
+  text-align: center;
 }
 
-td:nth-child(4) {
+.missionPage td:nth-child(4) {
   width: 150px;
   text-align: center;
 }
 
-tr:nth-child(even) {
+.missionPage tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
@@ -41,7 +42,6 @@ tbody > tr > :nth-child(2) {
   font-weight: bold;
   border: none;
   border-radius: 5px;
-  text-align: center;
 }
 
 button.nonMember {
@@ -67,4 +67,27 @@ button.join {
 button.leave {
   color: #df4553;
   border: 1px solid #df4553;
+}
+
+/* Table on profile page */
+.tablesContainer {
+  padding: 0 2rem;
+}
+
+.tablesContainer p {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.profilePage {
+  margin: 0;
+  width: 100%;
+}
+
+.profilePagetd {
+  padding: 15px;
+}
+
+.eachTable {
+  width: calc(100% / 3);
 }
