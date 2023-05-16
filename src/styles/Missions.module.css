@@ -36,24 +36,35 @@ tbody > tr > :nth-child(2) {
   line-height: 1.5;
 }
 
-button.member {
-  background-color: #6c757e;
+.status {
   color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 5px;
   text-align: center;
-
-  /* #1aa1b9 active */
 }
 
-button.join {
-  color: #6c757e;
+button.nonMember {
+  background-color: #6c757e;
+}
 
-  /* #df4553 leave */
-  border: 1px solid #6c757e;
+button.member {
+  background-color: #1aa1b9;
+}
+
+.joinLeave {
   border-radius: 5px;
   font-size: 1rem;
   padding: 0.5rem;
   background: transparent;
+}
+
+button.join {
+  color: #6c757e;
+  border: 1px solid #6c757e;
+}
+
+button.leave {
+  color: #df4553;
+  border: 1px solid #df4553;
 }

@@ -7,23 +7,23 @@ const initialState = {
   missions: [],
   isLoading: false,
   error: undefined,
+  reservedMission: [],
 };
 
-export const getMissions = createAsyncThunk('missions/getMissions', async (name, thunkAPI) => {
+export const getMissions = createAsyncThunk('missions/getMissions', async (thunkAPI) => {
   try {
     const resp = await axios(`${baseUrl}`);
     const { data } = resp;
-    // console.log(data);
     const neededData = [];
     data.forEach((element) => {
       const missionObj = {
         id: element.mission_id,
         name: element.mission_name,
         description: element.description,
+        reserved: false,
       };
       neededData.push(missionObj);
     });
-    // console.log(neededData);
     return neededData;
   } catch (error) {
     return thunkAPI.rejectWithValue('something went wrong');
@@ -34,7 +34,20 @@ const missionsSlice = createSlice({
   name: 'missions',
   initialState,
   reducers: {
-
+    joinMission: (state, action) => {
+      const itemId = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.id !== itemId) return mission;
+        return { ...mission, reserved: true };
+      });
+    },
+    leaveMission: (state, action) => {
+      const itemId = action.payload;
+      state.missions = state.missions.map((mission) => {
+        if (mission.id !== itemId) return mission;
+        return { ...mission, reserved: false };
+      });
+    },
   },
   extraReducers: (builder) => {
     // getDragons
@@ -52,5 +65,5 @@ const missionsSlice = createSlice({
   },
 });
 
-// export const { addBook, removeBook } = booksSlice.actions;
+export const { joinMission, leaveMission } = missionsSlice.actions;
 export default missionsSlice.reducer;
