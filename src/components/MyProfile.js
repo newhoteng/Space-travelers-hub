@@ -13,7 +13,7 @@ function MyProfile() {
         <table className={styles.profilePage}>
           {reservedMissions.map((mission) => (
             <tr key={mission.id}>
-              <td>{mission.name}</td>
+              <td className={styles.profilePagetd}>{mission.name}</td>
             </tr>
           ))}
         </table>
