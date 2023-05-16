@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDragons, reserveDragon } from '../redux/Dragons/DragonsSlice';
+import styles from '../styles/Dragon.module.css';
 
 const Dragons = () => {
   const dispatch = useDispatch();
@@ -18,10 +19,10 @@ const Dragons = () => {
   };
 
   return (
-    <div className="dragons-container">
+    <div className={styles.dragonsContainer}>
       {status
         && dragon.map((dragon) => (
-          <div className="container" key={dragon.id}>
+          <div className={styles.container} key={dragon.id}>
             <div className="article">
               <img
                 src={dragon.image}
@@ -37,7 +38,7 @@ const Dragons = () => {
               </p>
               <button
                 type="button"
-                className={reserved ? 'cancel' : 'reserve'}
+                className={reserved ? styles.cancel : styles.reserve}
                 onClick={() => handleReserveDragon(dragon.id)}
               >
                 {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}

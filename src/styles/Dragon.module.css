@@ -4,12 +4,29 @@
     margin: 0;
 }
 
+.dragonsContainer{
+    height: 100vh;
+    width: 100%;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
 .container{
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    gap: 1rem;
 }
 
-.dragonImage{
-    width: fit-content;
+.container img{
+   height: 50vh;
+   width: 50vw;
 }
+
+.reserve {
+    background-color: rgb(23, 123, 237);
+    color: white;
+    border-radius: 3px;
+    
+  }
