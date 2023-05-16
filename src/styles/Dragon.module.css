@@ -1,58 +1,58 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-.dragonsContainer{
-    height: 100vh;
-    width: 100%;
-    margin-top: .25rem;
-    margin-left: 1rem;
+.dragonsContainer {
+  height: 100vh;
+  width: 100%;
+  margin-top: 0.25rem;
+  margin-left: 1rem;
 }
 
-.container{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    gap: .25rem;
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 0.25rem;
 }
 
-.container img{
-    height: 25vh;
-    width: 225px;
-    margin-left: 43px;
-    margin-top: 17px;
+.container img {
+  height: 25vh;
+  width: 225px;
+  margin-left: 43px;
+  margin-top: 17px;
 }
 
-.desk{
-    margin-left: 17px;
+.desk {
+  margin-left: 17px;
 }
 
 p {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
 }
 
 .reserve {
-    color: rgb(255, 255, 255);
-    height: 30px;
-    width: 117px;
-    background-color: rgb(47, 103, 245);
-    border-radius: 4px;
-    border: 1px solid rgb(47, 103, 245);
-    margin-top: 0.25rem;
+  color: rgb(255, 255, 255);
+  height: 30px;
+  width: 117px;
+  background-color: rgb(47, 103, 245);
+  border-radius: 4px;
+  border: 1px solid rgb(47, 103, 245);
+  margin-top: 0.25rem;
 }
 
 .cancel {
-    color: rgb(161, 155, 155);
-    height: 30px;
-    width: 140px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 4px;
-    border: 1px solid rgb(92, 93, 94);
+  color: rgb(161, 155, 155);
+  height: 30px;
+  width: 140px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 4px;
+  border: 1px solid rgb(92, 93, 94);
 }
