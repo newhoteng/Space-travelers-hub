@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, isRejectedWithValue } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.spacexdata.com/v4/rockets';
+const url = 'https://api.spacexdata.com/v4/dragons';
 
 const initialState = {
   dragon: [],
