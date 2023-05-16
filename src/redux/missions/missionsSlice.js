@@ -10,7 +10,7 @@ const initialState = {
   reservedMission: [],
 };
 
-export const getMissions = createAsyncThunk('missions/getMissions', async (name, thunkAPI) => {
+export const getMissions = createAsyncThunk('missions/getMissions', async (thunkAPI) => {
   try {
     const resp = await axios(`${baseUrl}`);
     const { data } = resp;
