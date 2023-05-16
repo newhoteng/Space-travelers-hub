@@ -24,7 +24,7 @@ th {
   text-align: center;
 }
 
-.missionPage tr:nth-child(even) {
+.missionPage tbody tr:nth-child(odd) {
   background-color: #f2f2f2;
 }
 
