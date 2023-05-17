@@ -14,25 +14,21 @@ function MyProfile() {
       <div className={styles.eachTable}>
         <p>My Missions</p>
         <table className={styles.profilePage}>
-          <tbody>
-            {reservedMissions.map((mission) => (
-              <tr key={mission.id}>
-                <td className={styles.profilePagetd}>{mission.name}</td>
-              </tr>
-            ))}
-          </tbody>
+          {reservedMissions.map((mission) => (
+            <tr key={mission.id}>
+              <td className={styles.profilePagetd}>{mission.name}</td>
+            </tr>
+          ))}
         </table>
       </div>
       <div className={styles.eachTable}>
         <p>My Rockets</p>
         <table className={styles.profilePage}>
-          <tbody>
-            {reservedRockets.map((rocket) => (
-              <tr key={rocket.id}>
-                <td className={styles.profilePagetd}>{rocket.name}</td>
-              </tr>
-            ))}
-          </tbody>
+          {reservedRockets.map((rocket) => (
+            <tr key={rocket.id}>
+              <td className={styles.profilePagetd}>{rocket.name}</td>
+            </tr>
+          ))}
         </table>
       </div>
     </div>
