@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDragons, reserveDragon } from '../redux/Dragons/DragonsSlice';
 import styles from '../styles/Dragon.module.css';
 
 const Dragons = () => {
   const dispatch = useDispatch();
-  const { dragon, status } = useSelector((store) => store.dragon);
-
-  const [reserved, setReserved] = useState(false);
+  const { dragon } = useSelector((store) => store.dragon);
+  const { isLoading } = useSelector((state) => state.dragon);
 
   useEffect(() => {
-    if (status === false) dispatch(getDragons());
-  }, [dispatch, status]);
-
-  const handleReserveDragon = (id) => {
-    dispatch(reserveDragon(id));
-    setReserved(!reserved);
-  };
+    if (isLoading === false) dispatch(getDragons());
+  }, [dispatch, isLoading]);
 
   return (
     <div className={styles.dragonsContainer}>
-      {status
+      {isLoading
         && dragon.map((dragon) => (
           <div className={styles.container} key={dragon.id}>
             <div className="article">
@@ -33,15 +27,15 @@ const Dragons = () => {
             <div className="desc">
               <h2 className="dragon-title">{dragon.name}</h2>
               <p className="dragon-details">
-                {reserved && <span className="reserved">Reserved</span>}
+                {dragon.reserved && <span className="reserved">Reserved</span>}
                 {dragon.description}
               </p>
               <button
                 type="button"
-                className={reserved ? styles.cancel : styles.reserve}
-                onClick={() => handleReserveDragon(dragon.id)}
+                className={dragon.reserved ? styles.cancel : styles.reserve}
+                onClick={() => dispatch(reserveDragon(dragon.id))}
               >
-                {reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+                {dragon.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
               </button>
             </div>
           </div>
