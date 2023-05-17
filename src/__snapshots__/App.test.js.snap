@@ -82,28 +82,29 @@ exports[`App snapshots header renders correctly 1`] = `
 </header>
 `;
 
-exports[`App snapshots mission renders correctly 1`] = `
-<table
-  className="missionPage"
+exports[`App snapshots profile renders correctly 1`] = `
+<div
+  className="tablesContainer"
 >
-  <thead>
-    <tr>
-      <th>
-        Mission
-      </th>
-      <th>
-        Description
-      </th>
-      <th>
-        Status
-      </th>
-      <th
-        className="invisible"
-      >
-        Blank
-      </th>
-    </tr>
-  </thead>
-  <tbody />
-</table>
+  <div
+    className="eachTable"
+  >
+    <p>
+      My Missions
+    </p>
+    <table
+      className="profilePage"
+    />
+  </div>
+  <div
+    className="eachTable"
+  >
+    <p>
+      My Rockets
+    </p>
+    <table
+      className="profilePage"
+    />
+  </div>
+</div>
 `;
