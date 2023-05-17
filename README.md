@@ -105,7 +105,7 @@ npm install
 
 ## :telescope: Future Features <a name="future-features"></a>
 
-  - Buidling new products.
+  - Making our website resonsive by adding a mobile version.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
