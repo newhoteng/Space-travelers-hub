@@ -13,17 +13,14 @@ export const getMissions = createAsyncThunk('missions/getMissions', async (thunk
   try {
     const resp = await axios(`${Url}`);
     const { data } = resp;
-    const neededData = [];
-    data.forEach((element) => {
-      const missionObj = {
-        id: element.mission_id,
-        name: element.mission_name,
-        description: element.description,
+    return data.map((mission) => (
+      {
+        id: mission.mission_id,
+        name: mission.mission_name,
+        description: mission.description,
         reserved: false,
-      };
-      neededData.push(missionObj);
-    });
-    return neededData;
+      }
+    ));
   } catch (error) {
     return thunkAPI.rejectWithValue('something went wrong');
   }
