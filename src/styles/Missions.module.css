@@ -72,6 +72,9 @@ button.leave {
 /* Table on profile page */
 .tablesContainer {
   padding: 0 2rem;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
 }
 
 .tablesContainer p {
