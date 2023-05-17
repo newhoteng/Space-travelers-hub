@@ -15,7 +15,7 @@ th {
 }
 
 .missionPage td:nth-child(3) {
-  width: 120px;
+  width: 130px;
   text-align: center;
 }
 
@@ -42,6 +42,8 @@ tbody > tr > :nth-child(2) {
   font-weight: bold;
   border: none;
   border-radius: 5px;
+  font-size: 0.8rem;
+  padding: 0.25rem;
 }
 
 button.nonMember {
