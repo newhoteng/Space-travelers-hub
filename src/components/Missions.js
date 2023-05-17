@@ -9,8 +9,10 @@ function Missions() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
+    if (!missions.length) {
+      dispatch(getMissions());
+    }
+  }, [dispatch, missions]);
 
   if (isLoading) {
     return (

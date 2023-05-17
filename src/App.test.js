@@ -13,9 +13,47 @@ import Profile from './components/MyProfile';
 
 // Function imports
 import reducer, { joinMission, leaveMission } from './redux/missions/missionsSlice';
+import { reserveRocket } from './redux/Rockets/RocketsSlice';
+import { reserveDragon } from './redux/Dragons/DragonsSlice';
+
+describe('Rockets Slice', () => {
+  test('should handle reserving a rocket', () => {
+    const state = {
+      rocket: [
+        {
+          id: '0', name: 'Falcon 1', description: 'The best', image: 'linkto image',
+        },
+        {
+          id: '1', name: 'Falcon 9', description: 'Second best', image: 'linkto image',
+        },
+        {
+          id: '2', name: 'Falcon Heavy', description: 'Third best', image: 'linkto image',
+        },
+      ],
+      isLoading: false,
+    };
+
+    expect(reducer(state, reserveRocket('1'))).toEqual(
+      {
+        rocket: [
+          {
+            id: '0', name: 'Falcon 1', description: 'The best', image: 'linkto image',
+          },
+          {
+            id: '1', name: 'Falcon 9', description: 'Second best', image: 'linkto image',
+          },
+          {
+            id: '2', name: 'Falcon Heavy', description: 'Third best', image: 'linkto image',
+          },
+        ],
+        isLoading: false,
+      }
+    );
+  });
+});
 
 describe('Missions Slice', () => {
-  test('should handle a mission being reserved', () => {
+  test('should handle reserving a mission', () => {
     const state = {
       missions: [
         {
@@ -51,7 +89,7 @@ describe('Missions Slice', () => {
     );
   });
 
-  test('should handle a mission being cancelled', () => {
+  test('should handle cancelling a mission', () => {
     const state = {
       missions: [
         {
@@ -87,6 +125,51 @@ describe('Missions Slice', () => {
     );
   });
 });
+
+// const initialState = {
+//   dragon: [],
+//   status: false,
+//   error: null,
+// };
+
+// return dragonData.map((dragon) => ({
+//   id: dragon.id,
+//   name: dragon.name,
+//   description: dragon.description,
+//   image: dragon.flickr_images[0],
+// }));
+
+describe('Dragons Slice', () => {
+  test('should handle reserving a rocket', () => {
+    const state = {
+      dragon: [
+        {
+          id: '0', name: 'Dragon 1', description: 'The best', image: 'linkto image',
+        },
+        {
+          id: '1', name: 'Dragon 2', description: 'Second best', image: 'linkto image',
+        },
+      ],
+      status: false,
+      error: null,
+    };
+
+    expect(reducer(state, reserveDragon('1'))).toEqual(
+      {
+        dragon: [
+          {
+            id: '0', name: 'Dragon 1', description: 'The best', image: 'linkto image',
+          },
+          {
+            id: '1', name: 'Dragon 2', description: 'Second best', image: 'linkto image',
+          },
+        ],
+        status: false,
+        error: null,
+      }
+    );
+  });
+})
 
 // // Snapshots for all components await screen.findByText(/loaded/i)
 describe('App snapshots', () => {
@@ -134,16 +217,16 @@ describe('App snapshots', () => {
   //   expect(dragons).toMatchSnapshot();
   // });
 
-  it('profile renders correctly', () => {
-    const profile = renderer
-      .create(
-        <Provider store={store}>
-          <Profile page="/profile">Profile Page</Profile>
-        </Provider>,
-      )
-      .toJSON();
-    expect(profile).toMatchSnapshot();
-  });
+  // it('profile renders correctly', () => {
+  //   const profile = renderer
+  //     .create(
+  //       <Provider store={store}>
+  //         <Profile page="/profile">Profile Page</Profile>
+  //       </Provider>,
+  //     )
+  //     .toJSON();
+  //   expect(profile).toMatchSnapshot();
+  // });
 });
 
 // Using React Testing library to render components

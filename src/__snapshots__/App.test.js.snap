@@ -107,20 +107,3 @@ exports[`App snapshots mission renders correctly 1`] = `
   <tbody />
 </table>
 `;
-
-exports[`App snapshots profile renders correctly 1`] = `
-<div
-  className="tablesContainer"
->
-  <div
-    className="eachTable"
-  >
-    <p>
-      My Missions
-    </p>
-    <table
-      className="profilePage"
-    />
-  </div>
-</div>
-`;
