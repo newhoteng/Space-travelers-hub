@@ -1,5 +1,4 @@
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event'
+import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
@@ -9,7 +8,6 @@ import { store } from './redux/store';
 import Header from './components/Header';
 import Rockets from './components/Rockets';
 import Dragons from './components/Dragons';
-import MissionItem from './components/MissionItem';
 import Missions from './components/Missions';
 import Profile from './components/MyProfile';
 
@@ -18,12 +16,17 @@ import reducer, { joinMission, leaveMission } from './redux/missions/missionsSli
 
 describe('Missions Slice', () => {
   test('should handle a mission being reserved', () => {
-
     const state = {
       missions: [
-        {id: '0', name: 'Thaicom', description: 'The best', reserved: false},
-        {id: '1', name: 'Telstar', description: 'Second best', reserved: false},
-        {id: '2', name: 'Iridium', description: 'Third best', reserved: false},
+        {
+          id: '0', name: 'Thaicom', description: 'The best', reserved: false,
+        },
+        {
+          id: '1', name: 'Telstar', description: 'Second best', reserved: false,
+        },
+        {
+          id: '2', name: 'Iridium', description: 'Third best', reserved: false,
+        },
       ],
       isLoading: false,
       error: undefined,
@@ -32,23 +35,34 @@ describe('Missions Slice', () => {
     expect(reducer(state, joinMission('1'))).toEqual(
       {
         missions: [
-          {id: '0', name: 'Thaicom', description: 'The best', reserved: false},
-          {id: '1', name: 'Telstar', description: 'Second best', reserved: true},
-          {id: '2', name: 'Iridium', description: 'Third best', reserved: false},
+          {
+            id: '0', name: 'Thaicom', description: 'The best', reserved: false,
+          },
+          {
+            id: '1', name: 'Telstar', description: 'Second best', reserved: true,
+          },
+          {
+            id: '2', name: 'Iridium', description: 'Third best', reserved: false,
+          },
         ],
         isLoading: false,
         error: undefined,
-      }
+      },
     );
   });
 
   test('should handle a mission being cancelled', () => {
-
     const state = {
       missions: [
-        {id: '0', name: 'Thaicom', description: 'The best', reserved: true},
-        {id: '1', name: 'Telstar', description: 'Second best', reserved: false},
-        {id: '2', name: 'Iridium', description: 'Third best', reserved: false},
+        {
+          id: '0', name: 'Thaicom', description: 'The best', reserved: true,
+        },
+        {
+          id: '1', name: 'Telstar', description: 'Second best', reserved: false,
+        },
+        {
+          id: '2', name: 'Iridium', description: 'Third best', reserved: false,
+        },
       ],
       isLoading: false,
       error: undefined,
@@ -57,36 +71,31 @@ describe('Missions Slice', () => {
     expect(reducer(state, leaveMission('0'))).toEqual(
       {
         missions: [
-          {id: '0', name: 'Thaicom', description: 'The best', reserved: false},
-          {id: '1', name: 'Telstar', description: 'Second best', reserved: false},
-          {id: '2', name: 'Iridium', description: 'Third best', reserved: false},
+          {
+            id: '0', name: 'Thaicom', description: 'The best', reserved: false,
+          },
+          {
+            id: '1', name: 'Telstar', description: 'Second best', reserved: false,
+          },
+          {
+            id: '2', name: 'Iridium', description: 'Third best', reserved: false,
+          },
         ],
         isLoading: false,
         error: undefined,
-      }
+      },
     );
   });
 });
-
-// test("Active member visible after join mission button click", async () => {
-//   const mockData = {id: '0', name: 'Thaicom', description: 'The best', reserved: false};
-//   render(
-//     <Provider store={store}>
-//       <MissionItem itemProps={mockData}/>
-//     </Provider>
-//   );
-//   await userEvent.click(screen.getByText(/join mission/i));
-//   expect(screen.getByText(/leave mission/i)).toBeInTheDocument();
-// })
 
 // // Snapshots for all components await screen.findByText(/loaded/i)
 describe('App snapshots', () => {
   it('header renders correctly', () => {
     const header = renderer
       .create(
-        <BrowserRouter >
+        <BrowserRouter>
           <Header page="/">Header</Header>
-        </BrowserRouter>
+        </BrowserRouter>,
       )
       .toJSON();
     expect(header).toMatchSnapshot();
@@ -108,7 +117,7 @@ describe('App snapshots', () => {
       .create(
         <Provider store={store}>
           <Missions page="/missions">Missions Page</Missions>
-        </Provider>
+        </Provider>,
       )
       .toJSON();
     expect(missions).toMatchSnapshot();
@@ -130,7 +139,7 @@ describe('App snapshots', () => {
       .create(
         <Provider store={store}>
           <Profile page="/profile">Profile Page</Profile>
-        </Provider>
+        </Provider>,
       )
       .toJSON();
     expect(profile).toMatchSnapshot();
@@ -143,7 +152,7 @@ describe('Render Components', () => {
     render(
       <BrowserRouter>
         <Header />
-      </BrowserRouter>
+      </BrowserRouter>,
     );
   });
 
@@ -151,7 +160,7 @@ describe('Render Components', () => {
     render(
       <Provider store={store}>
         <Rockets />
-      </Provider>
+      </Provider>,
     );
   });
 
@@ -159,7 +168,7 @@ describe('Render Components', () => {
     render(
       <Provider store={store}>
         <Missions />
-      </Provider>
+      </Provider>,
     );
   });
 
@@ -167,7 +176,7 @@ describe('Render Components', () => {
     render(
       <Provider store={store}>
         <Dragons />
-      </Provider>
+      </Provider>,
     );
   });
 
@@ -175,7 +184,7 @@ describe('Render Components', () => {
     render(
       <Provider store={store}>
         <Profile />
-      </Provider>
+      </Provider>,
     );
   });
 });
