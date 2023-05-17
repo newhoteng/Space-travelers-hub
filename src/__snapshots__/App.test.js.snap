@@ -1,0 +1,126 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App snapshots header renders correctly 1`] = `
+<header
+  className="header"
+>
+  <div>
+    <img
+      alt="planet"
+      src="planet.png"
+    />
+    <h1>
+      Space Travelers' Hub
+    </h1>
+  </div>
+  <nav>
+    <ul
+      className="navigation"
+    >
+      <li>
+        <a
+          aria-current="page"
+          className="active"
+          href="/"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "underline",
+            }
+          }
+        >
+          Rockets
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/missions"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          Missions
+        </a>
+      </li>
+      <li>
+        <a
+          className=""
+          href="/dragons"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          Dragons
+        </a>
+      </li>
+      <li
+        className="item"
+      />
+      <li>
+        <a
+          className=""
+          href="/profile"
+          onClick={[Function]}
+          style={
+            Object {
+              "textDecoration": "none",
+            }
+          }
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;
+
+exports[`App snapshots mission renders correctly 1`] = `
+<table
+  className="missionPage"
+>
+  <thead>
+    <tr>
+      <th>
+        Mission
+      </th>
+      <th>
+        Description
+      </th>
+      <th>
+        Status
+      </th>
+      <th
+        className="invisible"
+      >
+        Blank
+      </th>
+    </tr>
+  </thead>
+  <tbody />
+</table>
+`;
+
+exports[`App snapshots profile renders correctly 1`] = `
+<div
+  className="tablesContainer"
+>
+  <div
+    className="eachTable"
+  >
+    <p>
+      My Missions
+    </p>
+    <table
+      className="profilePage"
+    />
+  </div>
+</div>
+`;
