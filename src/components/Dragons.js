@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getDragons, reserveDragon } from '../redux/Dragons/DragonsSlice';
 import styles from '../styles/Dragon.module.css';
