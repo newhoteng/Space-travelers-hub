@@ -1,0 +1,39 @@
+.header {
+  background-color: #fff;
+  border-bottom: 1.5px solid #e8e8e8;
+  padding: 1rem 2rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.header img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.header div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 23px;
+}
+
+.header li {
+  list-style: none;
+}
+
+.header li a {
+  color: rgb(34, 124, 233);
+}
+
+.item {
+  border-left: 2px solid rgb(173, 173, 176);
+}
