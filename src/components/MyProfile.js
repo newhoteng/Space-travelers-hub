@@ -9,6 +9,9 @@ function MyProfile() {
   const Rockets = useSelector((store) => store.rocket.rocket);
   const reservedRockets = Rockets.filter((rocket) => rocket.reserved === true);
 
+  const Dragons = useSelector((store) => store.dragon.dragon);
+  const reservedDragons = Dragons.filter((dragon) => dragon.reserved === true);
+
   return (
     <div className={styles.tablesContainer}>
       <div className={styles.eachTable}>
@@ -27,6 +30,16 @@ function MyProfile() {
           {reservedRockets.map((rocket) => (
             <tr key={rocket.id}>
               <td className={styles.profilePagetd}>{rocket.name}</td>
+            </tr>
+          ))}
+        </table>
+      </div>
+      <div className={styles.eachTable}>
+        <p>My Dragons</p>
+        <table className={styles.profilePage}>
+          {reservedDragons.map((dragon) => (
+            <tr key={dragon.id}>
+              <td className={styles.profilePagetd}>{dragon.name}</td>
             </tr>
           ))}
         </table>
