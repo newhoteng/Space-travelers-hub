@@ -106,5 +106,15 @@ exports[`App snapshots profile renders correctly 1`] = `
       className="profilePage"
     />
   </div>
+  <div
+    className="eachTable"
+  >
+    <p>
+      My Dragons
+    </p>
+    <table
+      className="profilePage"
+    />
+  </div>
 </div>
 `;
