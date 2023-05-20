@@ -52,7 +52,7 @@ Space-travelers-hub is a web application that allow users to book rockets and dr
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## :rocket: Live Demo <a name="live-demo"></a>
-- [Space Travelers' Hub](https://space-travelers-bub.onrender.com/)
+- [Space Travelers' Hub](https://space-travelers-hub-36vw.onrender.com)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
