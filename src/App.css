@@ -4,6 +4,14 @@
   border-radius: 4px;
 }
 
+.rockets-container {
+  padding-right: 2rem;
+}
+
+.rocket-details {
+  text-align: justify;
+}
+
 .container {
   display: flex;
   flex-direction: row;
