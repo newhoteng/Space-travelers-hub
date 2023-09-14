@@ -13,6 +13,14 @@
   margin-left: 17px;
 }
 
+.dragonsContainer {
+  padding-right: 2rem;
+}
+
+.dragonDetails {
+  text-align: justify;
+}
+
 .reserve {
   color: rgb(255, 255, 255);
   height: 30px;
