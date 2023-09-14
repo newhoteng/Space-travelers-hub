@@ -26,7 +26,7 @@ const Dragons = () => {
             </div>
             <div className="desc">
               <h2 className="dragon-title">{dragon.name}</h2>
-              <p className="dragon-details">
+              <p className={styles.dragonDetails}>
                 {dragon.reserved && <span className="reserved">Reserved</span>}
                 {dragon.description}
               </p>
